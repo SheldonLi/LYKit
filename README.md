@@ -1,15 +1,12 @@
-# UWorks-iOS公共库
+##开发中一些有用的工具
 
 ### 工程通过cocoapod管理
 **目前使用到的框架有:**
 
-* 'AFNetworking', '~> 3.0.4'
+* 'AFNetworking', '~> 3.1.0'
 * 'SDWebImage', '~> 3.7.3'
 * 'SVProgressHUD', '~> 1.1.3'
-* 'MBProgressHUD', '~> 0.9.1'
 * 'FMDB', '~> 2.5'
-* 'MJExtension', '~> 2.5.12'
-* 'MJRefresh', '~> 2.4.10'
 
 ### 源代码在uworks-library目录下，包括自定义的代码段、分类工具、自定义控件等
 
