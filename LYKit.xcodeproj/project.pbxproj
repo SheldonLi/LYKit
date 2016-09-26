@@ -29,6 +29,8 @@
 		BF9F746A1D992345006529C5 /* UITableView+LYExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F745B1D992345006529C5 /* UITableView+LYExtention.m */; };
 		BF9F746B1D992345006529C5 /* UITableViewCell+LYExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F745D1D992345006529C5 /* UITableViewCell+LYExtention.m */; };
 		BF9F746C1D992345006529C5 /* UIView+FrameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F745F1D992345006529C5 /* UIView+FrameTool.m */; };
+		BF9F74781D99260C006529C5 /* SDWebImageManager+LY.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F746F1D99260C006529C5 /* SDWebImageManager+LY.m */; };
+		BF9F74791D99260C006529C5 /* LYHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74711D99260C006529C5 /* LYHttpTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,10 @@
 		BF9F745D1D992345006529C5 /* UITableViewCell+LYExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+LYExtention.m"; sourceTree = "<group>"; };
 		BF9F745E1D992345006529C5 /* UIView+FrameTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameTool.h"; sourceTree = "<group>"; };
 		BF9F745F1D992345006529C5 /* UIView+FrameTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameTool.m"; sourceTree = "<group>"; };
+		BF9F746E1D99260C006529C5 /* SDWebImageManager+LY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDWebImageManager+LY.h"; sourceTree = "<group>"; };
+		BF9F746F1D99260C006529C5 /* SDWebImageManager+LY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDWebImageManager+LY.m"; sourceTree = "<group>"; };
+		BF9F74701D99260C006529C5 /* LYHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHttpTool.h; sourceTree = "<group>"; };
+		BF9F74711D99260C006529C5 /* LYHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHttpTool.m; sourceTree = "<group>"; };
 		E50E265737E798AF6B8F9B52 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -164,6 +170,7 @@
 		BF9F73C11D98FE81006529C5 /* LYKit */ = {
 			isa = PBXGroup;
 			children = (
+				BF9F746D1D99260C006529C5 /* ThirdPartTools */,
 				BF9F74451D992344006529C5 /* LYCategory */,
 				BF9F73C51D98FE81006529C5 /* AppDelegate.h */,
 				BF9F73C61D98FE81006529C5 /* AppDelegate.m */,
@@ -235,6 +242,17 @@
 				BF9F745F1D992345006529C5 /* UIView+FrameTool.m */,
 			);
 			path = LYCategory;
+			sourceTree = "<group>";
+		};
+		BF9F746D1D99260C006529C5 /* ThirdPartTools */ = {
+			isa = PBXGroup;
+			children = (
+				BF9F746E1D99260C006529C5 /* SDWebImageManager+LY.h */,
+				BF9F746F1D99260C006529C5 /* SDWebImageManager+LY.m */,
+				BF9F74701D99260C006529C5 /* LYHttpTool.h */,
+				BF9F74711D99260C006529C5 /* LYHttpTool.m */,
+			);
+			path = ThirdPartTools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +454,9 @@
 				BF9F74621D992345006529C5 /* NSString+LY.m in Sources */,
 				BF9F74661D992345006529C5 /* UIButton+LY.m in Sources */,
 				BF9F73C41D98FE81006529C5 /* main.m in Sources */,
+				BF9F74791D99260C006529C5 /* LYHttpTool.m in Sources */,
 				BF9F746B1D992345006529C5 /* UITableViewCell+LYExtention.m in Sources */,
+				BF9F74781D99260C006529C5 /* SDWebImageManager+LY.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
