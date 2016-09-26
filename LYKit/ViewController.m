@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UWButton.h"
 
 @interface ViewController ()
 
@@ -17,8 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    UWButton *btn = [UWButton buttonWithTitle:@"111111" NormalImage:nil highlightImage:nil selectedImage:nil frame:CGRectMake(100, 100, 120, 44) target:self action:@selector(lalala)];
+    
+    [self.view addSubview:btn];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
