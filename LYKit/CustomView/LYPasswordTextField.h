@@ -1,5 +1,5 @@
 //
-//  UWPasswordTextField.h
+//  LYPasswordTextField.h
 //  uworks-library
 //
 //  Created by SheldonLee on 15/10/8.
@@ -9,8 +9,8 @@
 //  直接设置父类UITextField的属性secureTextEntry即可
 
 
-#import "UWTextField.h"
+#import <UIKit/UIKit.h>
 
-@interface UWPasswordTextField : UWTextField
+@interface LYPasswordTextField : UITextField
 
 @end

@@ -1,5 +1,5 @@
 //
-//  UWImageView.h
+//  LYImageView.h
 //  uworks-library
 //
 //  Created by SheldonLee on 15/9/29.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UWImageView : UIImageView
+@interface LYImageView : UIImageView
 /**
  *  边框的颜色
  */

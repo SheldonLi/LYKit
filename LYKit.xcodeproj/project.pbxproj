@@ -55,13 +55,17 @@
 		BF9F74CB1D9935CC006529C5 /* UWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74BC1D9935CC006529C5 /* UWTabBarController.m */; };
 		BF9F74CC1D9935CC006529C5 /* UWTabBar+UWNavigation框架搭建.md in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74BD1D9935CC006529C5 /* UWTabBar+UWNavigation框架搭建.md */; };
 		BF9F74CD1D9935CC006529C5 /* UWWeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74C01D9935CC006529C5 /* UWWeViewController.m */; };
-		BF9F74E21D9935D5006529C5 /* UWCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74D21D9935D5006529C5 /* UWCarouselView.m */; };
-		BF9F74E51D9935D5006529C5 /* UWPasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74D81D9935D5006529C5 /* UWPasswordTextField.m */; };
-		BF9F74E61D9935D5006529C5 /* UWRollingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74DA1D9935D5006529C5 /* UWRollingView.m */; };
-		BF9F74E71D9935D5006529C5 /* UWTextAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74DC1D9935D5006529C5 /* UWTextAnimationView.m */; };
-		BF9F74E81D9935D5006529C5 /* UWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74DE1D9935D5006529C5 /* UWTextField.m */; };
-		BF9F74E91D9935D5006529C5 /* UWTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74E01D9935D5006529C5 /* UWTextView.m */; };
-		BF9F74EF1D993EA7006529C5 /* UWImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74EE1D993EA7006529C5 /* UWImageView.m */; };
+		BF9F74E21D9935D5006529C5 /* LYCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74D21D9935D5006529C5 /* LYCarouselView.m */; };
+		BF9F74E51D9935D5006529C5 /* LYPasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74D81D9935D5006529C5 /* LYPasswordTextField.m */; };
+		BF9F74E61D9935D5006529C5 /* LYRollingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74DA1D9935D5006529C5 /* LYRollingView.m */; };
+		BF9F74E71D9935D5006529C5 /* LYTextAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74DC1D9935D5006529C5 /* LYTextAnimationView.m */; };
+		BF9F74E91D9935D5006529C5 /* LYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74E01D9935D5006529C5 /* LYTextView.m */; };
+		BF9F74EF1D993EA7006529C5 /* LYImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74EE1D993EA7006529C5 /* LYImageView.m */; };
+		BF9F74F31D993F34006529C5 /* LYToast.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74F21D993F34006529C5 /* LYToast.m */; };
+		BF9F74F61D993F3B006529C5 /* LYPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F74F51D993F3B006529C5 /* LYPopViewController.m */; };
+		BF9F75021D993F74006529C5 /* SettingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F75011D993F74006529C5 /* SettingTool.m */; };
+		BF9F75061D993FB5006529C5 /* LYHealthKitTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F75051D993FB5006529C5 /* LYHealthKitTool.m */; };
+		BF9F750A1D994112006529C5 /* LYLogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F75091D994112006529C5 /* LYLogManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,22 +181,30 @@
 		BF9F74BD1D9935CC006529C5 /* UWTabBar+UWNavigation框架搭建.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "UWTabBar+UWNavigation框架搭建.md"; sourceTree = "<group>"; };
 		BF9F74BF1D9935CC006529C5 /* UWWeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWWeViewController.h; sourceTree = "<group>"; };
 		BF9F74C01D9935CC006529C5 /* UWWeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWWeViewController.m; sourceTree = "<group>"; };
-		BF9F74D11D9935D5006529C5 /* UWCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWCarouselView.h; sourceTree = "<group>"; };
-		BF9F74D21D9935D5006529C5 /* UWCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWCarouselView.m; sourceTree = "<group>"; };
-		BF9F74D71D9935D5006529C5 /* UWPasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWPasswordTextField.h; sourceTree = "<group>"; };
-		BF9F74D81D9935D5006529C5 /* UWPasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWPasswordTextField.m; sourceTree = "<group>"; };
-		BF9F74D91D9935D5006529C5 /* UWRollingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWRollingView.h; sourceTree = "<group>"; };
-		BF9F74DA1D9935D5006529C5 /* UWRollingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWRollingView.m; sourceTree = "<group>"; };
-		BF9F74DB1D9935D5006529C5 /* UWTextAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWTextAnimationView.h; sourceTree = "<group>"; };
-		BF9F74DC1D9935D5006529C5 /* UWTextAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWTextAnimationView.m; sourceTree = "<group>"; };
-		BF9F74DD1D9935D5006529C5 /* UWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWTextField.h; sourceTree = "<group>"; };
-		BF9F74DE1D9935D5006529C5 /* UWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWTextField.m; sourceTree = "<group>"; };
-		BF9F74DF1D9935D5006529C5 /* UWTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWTextView.h; sourceTree = "<group>"; };
-		BF9F74E01D9935D5006529C5 /* UWTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWTextView.m; sourceTree = "<group>"; };
+		BF9F74D11D9935D5006529C5 /* LYCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCarouselView.h; sourceTree = "<group>"; };
+		BF9F74D21D9935D5006529C5 /* LYCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCarouselView.m; sourceTree = "<group>"; };
+		BF9F74D71D9935D5006529C5 /* LYPasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPasswordTextField.h; sourceTree = "<group>"; };
+		BF9F74D81D9935D5006529C5 /* LYPasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPasswordTextField.m; sourceTree = "<group>"; };
+		BF9F74D91D9935D5006529C5 /* LYRollingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRollingView.h; sourceTree = "<group>"; };
+		BF9F74DA1D9935D5006529C5 /* LYRollingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRollingView.m; sourceTree = "<group>"; };
+		BF9F74DB1D9935D5006529C5 /* LYTextAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTextAnimationView.h; sourceTree = "<group>"; };
+		BF9F74DC1D9935D5006529C5 /* LYTextAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTextAnimationView.m; sourceTree = "<group>"; };
+		BF9F74DF1D9935D5006529C5 /* LYTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTextView.h; sourceTree = "<group>"; };
+		BF9F74E01D9935D5006529C5 /* LYTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTextView.m; sourceTree = "<group>"; };
 		BF9F74EB1D993616006529C5 /* ColorAndFontHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorAndFontHeader.h; sourceTree = "<group>"; };
 		BF9F74EC1D993623006529C5 /* ScreenHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenHeader.h; sourceTree = "<group>"; };
-		BF9F74ED1D993EA7006529C5 /* UWImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWImageView.h; sourceTree = "<group>"; };
-		BF9F74EE1D993EA7006529C5 /* UWImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWImageView.m; sourceTree = "<group>"; };
+		BF9F74ED1D993EA7006529C5 /* LYImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYImageView.h; sourceTree = "<group>"; };
+		BF9F74EE1D993EA7006529C5 /* LYImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYImageView.m; sourceTree = "<group>"; };
+		BF9F74F11D993F34006529C5 /* LYToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYToast.h; sourceTree = "<group>"; };
+		BF9F74F21D993F34006529C5 /* LYToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYToast.m; sourceTree = "<group>"; };
+		BF9F74F41D993F3B006529C5 /* LYPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPopViewController.h; sourceTree = "<group>"; };
+		BF9F74F51D993F3B006529C5 /* LYPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPopViewController.m; sourceTree = "<group>"; };
+		BF9F75001D993F74006529C5 /* SettingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTool.h; sourceTree = "<group>"; };
+		BF9F75011D993F74006529C5 /* SettingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTool.m; sourceTree = "<group>"; };
+		BF9F75041D993FB5006529C5 /* LYHealthKitTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYHealthKitTool.h; sourceTree = "<group>"; };
+		BF9F75051D993FB5006529C5 /* LYHealthKitTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYHealthKitTool.m; sourceTree = "<group>"; };
+		BF9F75081D994112006529C5 /* LYLogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYLogManager.h; sourceTree = "<group>"; };
+		BF9F75091D994112006529C5 /* LYLogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLogManager.m; sourceTree = "<group>"; };
 		E50E265737E798AF6B8F9B52 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -271,6 +283,7 @@
 				BF9F73C61D98FE81006529C5 /* AppDelegate.m */,
 				BF9F73C81D98FE81006529C5 /* ViewController.h */,
 				BF9F73C91D98FE81006529C5 /* ViewController.m */,
+				BF9F74F01D993F28006529C5 /* Tools */,
 				BF9F74A11D9935CC006529C5 /* UWTabBarController */,
 				BF9F747D1D9935C5006529C5 /* UWDrawerController */,
 				BF9F73CB1D98FE81006529C5 /* Main.storyboard */,
@@ -481,20 +494,18 @@
 		BF9F74CE1D9935D5006529C5 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				BF9F74D11D9935D5006529C5 /* UWCarouselView.h */,
-				BF9F74D21D9935D5006529C5 /* UWCarouselView.m */,
-				BF9F74ED1D993EA7006529C5 /* UWImageView.h */,
-				BF9F74EE1D993EA7006529C5 /* UWImageView.m */,
-				BF9F74D71D9935D5006529C5 /* UWPasswordTextField.h */,
-				BF9F74D81D9935D5006529C5 /* UWPasswordTextField.m */,
-				BF9F74D91D9935D5006529C5 /* UWRollingView.h */,
-				BF9F74DA1D9935D5006529C5 /* UWRollingView.m */,
-				BF9F74DB1D9935D5006529C5 /* UWTextAnimationView.h */,
-				BF9F74DC1D9935D5006529C5 /* UWTextAnimationView.m */,
-				BF9F74DD1D9935D5006529C5 /* UWTextField.h */,
-				BF9F74DE1D9935D5006529C5 /* UWTextField.m */,
-				BF9F74DF1D9935D5006529C5 /* UWTextView.h */,
-				BF9F74E01D9935D5006529C5 /* UWTextView.m */,
+				BF9F74D11D9935D5006529C5 /* LYCarouselView.h */,
+				BF9F74D21D9935D5006529C5 /* LYCarouselView.m */,
+				BF9F74ED1D993EA7006529C5 /* LYImageView.h */,
+				BF9F74EE1D993EA7006529C5 /* LYImageView.m */,
+				BF9F74D71D9935D5006529C5 /* LYPasswordTextField.h */,
+				BF9F74D81D9935D5006529C5 /* LYPasswordTextField.m */,
+				BF9F74D91D9935D5006529C5 /* LYRollingView.h */,
+				BF9F74DA1D9935D5006529C5 /* LYRollingView.m */,
+				BF9F74DB1D9935D5006529C5 /* LYTextAnimationView.h */,
+				BF9F74DC1D9935D5006529C5 /* LYTextAnimationView.m */,
+				BF9F74DF1D9935D5006529C5 /* LYTextView.h */,
+				BF9F74E01D9935D5006529C5 /* LYTextView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -506,6 +517,47 @@
 				BF9F74EB1D993616006529C5 /* ColorAndFontHeader.h */,
 			);
 			path = Macro;
+			sourceTree = "<group>";
+		};
+		BF9F74F01D993F28006529C5 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				BF9F75071D994112006529C5 /* LYLogTool */,
+				BF9F75031D993FB5006529C5 /* LYHealthKitTool */,
+				BF9F74FF1D993F6C006529C5 /* LYSetting */,
+				BF9F74F11D993F34006529C5 /* LYToast.h */,
+				BF9F74F21D993F34006529C5 /* LYToast.m */,
+				BF9F74F41D993F3B006529C5 /* LYPopViewController.h */,
+				BF9F74F51D993F3B006529C5 /* LYPopViewController.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		BF9F74FF1D993F6C006529C5 /* LYSetting */ = {
+			isa = PBXGroup;
+			children = (
+				BF9F75001D993F74006529C5 /* SettingTool.h */,
+				BF9F75011D993F74006529C5 /* SettingTool.m */,
+			);
+			path = LYSetting;
+			sourceTree = "<group>";
+		};
+		BF9F75031D993FB5006529C5 /* LYHealthKitTool */ = {
+			isa = PBXGroup;
+			children = (
+				BF9F75041D993FB5006529C5 /* LYHealthKitTool.h */,
+				BF9F75051D993FB5006529C5 /* LYHealthKitTool.m */,
+			);
+			path = LYHealthKitTool;
+			sourceTree = "<group>";
+		};
+		BF9F75071D994112006529C5 /* LYLogTool */ = {
+			isa = PBXGroup;
+			children = (
+				BF9F75081D994112006529C5 /* LYLogManager.h */,
+				BF9F75091D994112006529C5 /* LYLogManager.m */,
+			);
+			path = LYLogTool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -694,15 +746,17 @@
 			files = (
 				BF9F74CD1D9935CC006529C5 /* UWWeViewController.m in Sources */,
 				BF9F74C41D9935CC006529C5 /* UWFinaceViewController.m in Sources */,
+				BF9F75061D993FB5006529C5 /* LYHealthKitTool.m in Sources */,
 				BF9F74681D992345006529C5 /* UIImage+LY.m in Sources */,
 				BF9F749A1D9935C5006529C5 /* UWCenterViewController.m in Sources */,
 				BF9F74CC1D9935CC006529C5 /* UWTabBar+UWNavigation框架搭建.md in Sources */,
 				BF9F749B1D9935C5006529C5 /* UWCenterNavigationController.m in Sources */,
 				BF9F74691D992345006529C5 /* UIImage+LYMainBudleImage.m in Sources */,
-				BF9F74E61D9935D5006529C5 /* UWRollingView.m in Sources */,
+				BF9F74E61D9935D5006529C5 /* LYRollingView.m in Sources */,
 				BF9F74651D992345006529C5 /* NSString+SandBox.m in Sources */,
 				BF9F746A1D992345006529C5 /* UITableView+LYExtention.m in Sources */,
-				BF9F74E91D9935D5006529C5 /* UWTextView.m in Sources */,
+				BF9F74F61D993F3B006529C5 /* LYPopViewController.m in Sources */,
+				BF9F74E91D9935D5006529C5 /* LYTextView.m in Sources */,
 				BF9F73CA1D98FE81006529C5 /* ViewController.m in Sources */,
 				BF9F74601D992345006529C5 /* NSObject+LYArchive.m in Sources */,
 				BF9F74C71D9935CC006529C5 /* UWHomeViewController.m in Sources */,
@@ -717,15 +771,15 @@
 				BF9F74981D9935C5006529C5 /* MMDrawerVisualState.m in Sources */,
 				BF9F74971D9935C5006529C5 /* MMDrawerController.m in Sources */,
 				BF9F749F1D9935C5006529C5 /* UWLeftViewController.m in Sources */,
-				BF9F74E71D9935D5006529C5 /* UWTextAnimationView.m in Sources */,
-				BF9F74E21D9935D5006529C5 /* UWCarouselView.m in Sources */,
+				BF9F74E71D9935D5006529C5 /* LYTextAnimationView.m in Sources */,
+				BF9F74E21D9935D5006529C5 /* LYCarouselView.m in Sources */,
 				BF9F73C71D98FE81006529C5 /* AppDelegate.m in Sources */,
 				BF9F74641D992345006529C5 /* NSString+Predicate.m in Sources */,
 				BF9F74671D992345006529C5 /* UIButton+LYCountDown.m in Sources */,
 				BF9F74C61D9935CC006529C5 /* UWHomeThirdViewController.m in Sources */,
-				BF9F74E81D9935D5006529C5 /* UWTextField.m in Sources */,
 				BF9F74991D9935C5006529C5 /* UIViewController+MMDrawerController.m in Sources */,
-				BF9F74E51D9935D5006529C5 /* UWPasswordTextField.m in Sources */,
+				BF9F750A1D994112006529C5 /* LYLogManager.m in Sources */,
+				BF9F74E51D9935D5006529C5 /* LYPasswordTextField.m in Sources */,
 				BF9F74611D992345006529C5 /* NSObject+LYDescription.m in Sources */,
 				BF9F74CB1D9935CC006529C5 /* UWTabBarController.m in Sources */,
 				BF9F749E1D9935C5006529C5 /* UWDrawer+UWNavigation框架搭建.md in Sources */,
@@ -737,9 +791,11 @@
 				BF9F74661D992345006529C5 /* UIButton+LY.m in Sources */,
 				BF9F73C41D98FE81006529C5 /* main.m in Sources */,
 				BF9F74791D99260C006529C5 /* LYHttpTool.m in Sources */,
+				BF9F74F31D993F34006529C5 /* LYToast.m in Sources */,
 				BF9F746B1D992345006529C5 /* UITableViewCell+LYExtention.m in Sources */,
+				BF9F75021D993F74006529C5 /* SettingTool.m in Sources */,
 				BF9F74781D99260C006529C5 /* SDWebImageManager+LY.m in Sources */,
-				BF9F74EF1D993EA7006529C5 /* UWImageView.m in Sources */,
+				BF9F74EF1D993EA7006529C5 /* LYImageView.m in Sources */,
 				BF9F74961D9935C5006529C5 /* MMDrawerBarButtonItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

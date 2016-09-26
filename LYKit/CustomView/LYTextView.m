@@ -1,20 +1,20 @@
 //
-//  UWTextView.m
+//  LYTextView.m
 //  uworks-library
 //
 //  Created by SheldonLee on 15/10/13.
 //  Copyright © 2015年 U-Works. All rights reserved.
 //
 
-#import "UWTextView.h"
+#import "LYTextView.h"
 
-@interface UWTextView ()<UITextViewDelegate> {
+@interface LYTextView ()<UITextViewDelegate> {
     UILabel *_placeholderLabel;
 }
 
 @end
 
-@implementation UWTextView
+@implementation LYTextView
 
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {

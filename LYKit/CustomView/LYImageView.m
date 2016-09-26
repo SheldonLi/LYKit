@@ -1,14 +1,14 @@
 //
-//  UWImageView.m
+//  LYImageView.m
 //  uworks-library
 //
 //  Created by SheldonLee on 15/9/29.
 //  Copyright © 2015年 U-Works. All rights reserved.
 //
 
-#import "UWImageView.h"
+#import "LYImageView.h"
 
-@implementation UWImageView
+@implementation LYImageView
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -18,16 +18,20 @@
 }
 */
 
-- (UWImageView *)initCircularImageViewFrame:(CGRect)frame Target:(id)target Action:(SEL)action {
-    UWImageView *circularImageView = [[UWImageView alloc] initWithFrame:frame];
+- (LYImageView *)initCircularImageViewFrame:(CGRect)frame Target:(id)target Action:(SEL)action {
+    LYImageView *circularImageView = [[LYImageView alloc] initWithFrame:frame];
+    
     circularImageView.layer.cornerRadius = frame.size.height * 0.5;
     circularImageView.layer.masksToBounds = YES;
+    
     circularImageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *re =
         [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
     [circularImageView addGestureRecognizer:re];
     return circularImageView;
 }
+
+
 
 /**
  *  setterAndgetter

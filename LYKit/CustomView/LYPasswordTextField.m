@@ -1,20 +1,20 @@
 //
-//  UWPasswordTextField.m
+//  LYPasswordTextField.m
 //  uworks-library
 //
 //  Created by SheldonLee on 15/10/8.
 //  Copyright © 2015年 U-Works. All rights reserved.
 //
 
-#import "UWPasswordTextField.h"
+#import "LYPasswordTextField.h"
 
-@interface UWPasswordTextField ()
-@property(nonatomic, copy) NSString *password;
-@property(nonatomic, weak) id beginEditingObserver;
-@property(nonatomic, weak) id endEditingObserver;
+@interface LYPasswordTextField ()
+@property (nonatomic, copy) NSString *password;
+@property (nonatomic, weak) id beginEditingObserver;
+@property (nonatomic, weak) id endEditingObserver;
 @end
 
-@implementation UWPasswordTextField
+@implementation LYPasswordTextField
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -36,7 +36,7 @@
 
     self.password = @"";
 
-    __weak UWPasswordTextField *weakSelf = self;
+    __weak LYPasswordTextField *weakSelf = self;
 
     self.beginEditingObserver = [[NSNotificationCenter defaultCenter]
         addObserverForName:UITextFieldTextDidBeginEditingNotification

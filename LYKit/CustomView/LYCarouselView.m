@@ -1,22 +1,22 @@
 //
-//  UWCarouselView.m
+//  LYCarouselView.m
 //  uworks-library
 //
 //  Created by SheldonLee on 15/10/10.
 //  Copyright © 2015年 U-Works. All rights reserved.
 //
 
-#import "UWCarouselView.h"
+#import "LYCarouselView.h"
 #import <UIImageView+WebCache.h>
 
-typedef void (^UWCarouselViewTapBlock)();
+typedef void (^LYCarouselViewTapBlock)();
 
-@interface UWClickableImageView : UIImageView
+@interface LYClickableImageView : UIImageView
 @property (nonatomic, assign) BOOL enable;
-@property (nonatomic, copy) UWCarouselViewTapBlock tapBlock;
+@property (nonatomic, copy) LYCarouselViewTapBlock tapBlock;
 @end
 
-@implementation UWClickableImageView
+@implementation LYClickableImageView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
@@ -52,15 +52,15 @@ typedef void (^UWCarouselViewTapBlock)();
 @end
 ////////////////////////////////////////////////////////////////////////////////////////
 
-@implementation UWCarouselItem
+@implementation LYCarouselItem
 
 @end
 
-@implementation UWCarouselURLItem
+@implementation LYCarouselURLItem
 
 @end
 
-@implementation UWCarouselViewItem
+@implementation LYCarouselViewItem
 
 @end
 
@@ -77,7 +77,7 @@ typedef void (^UWCarouselViewTapBlock)();
         if (self.finite) return; \
     } while (0)
 
-@interface UWCarouselView ()<UIScrollViewDelegate>
+@interface LYCarouselView ()<UIScrollViewDelegate>
 @property (nonatomic, assign) NSInteger currentPage;
 
 @property (nonatomic, weak) UIScrollView *scrollView;
@@ -87,12 +87,12 @@ typedef void (^UWCarouselViewTapBlock)();
 @property (nonatomic, assign) CGSize lastSize;
 
 @property (nonatomic, strong) NSTimer *autoPagingTimer;
-@property (nonatomic, copy) UWCarouselViewDidSelectBlock didSelectBlock;
-@property (nonatomic, copy) UWCarouselViewDidChangeBlock didChangeBlock;
+@property (nonatomic, copy) ly_carouselViewDidSelectBlock didSelectBlock;
+@property (nonatomic, copy) ly_carouselViewDidChangeBlock didChangeBlock;
 
 @end
 
-@implementation UWCarouselView
+@implementation LYCarouselView
 
 @dynamic numberOfItems;
 
@@ -210,10 +210,10 @@ typedef void (^UWCarouselViewTapBlock)();
 
     if (items.count == 0) return;
 
-    // 把图片地址加到UWCarouselURLItem对象内
+    // 把图片地址加到LYCarouselURLItem对象内
     NSMutableArray *tempItems = [NSMutableArray array];
     for (NSString *imageUrl in items) {
-        UWCarouselURLItem *urlItem = [UWCarouselURLItem new];
+        LYCarouselURLItem *urlItem = [LYCarouselURLItem new];
         urlItem.imageUrl = imageUrl;
         [tempItems addObject:urlItem];
     }
@@ -227,16 +227,16 @@ typedef void (^UWCarouselViewTapBlock)();
     _scrollView.scrollEnabled = _items.count > 1;
 
     NSInteger index = 0;
-    for (UWCarouselItem *item in _items) {
-        UWClickableImageView *itemView = [UWClickableImageView new];
+    for (LYCarouselItem *item in _items) {
+        LYClickableImageView *itemView = [LYClickableImageView new];
 
         itemView.userInteractionEnabled = YES;
-        if ([item isKindOfClass:[UWCarouselURLItem class]]) {
-            NSString *imageUrl = [(UWCarouselURLItem *)item imageUrl];
+        if ([item isKindOfClass:[LYCarouselURLItem class]]) {
+            NSString *imageUrl = [(LYCarouselURLItem *)item imageUrl];
             [itemView sd_setImageWithURL:[NSURL URLWithString:imageUrl]
                         placeholderImage:self.defaultImage];
-        } else if ([item isKindOfClass:[UWCarouselViewItem class]]) {
-            UIView *customView = [(UWCarouselViewItem *)item view];
+        } else if ([item isKindOfClass:[LYCarouselViewItem class]]) {
+            UIView *customView = [(LYCarouselViewItem *)item view];
             [itemView addSubview:customView];
             customView.autoresizingMask =
                 UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -260,11 +260,11 @@ typedef void (^UWCarouselViewTapBlock)();
     [self setNeedsLayout];
 }
 
-- (void)setDidSelectBlock:(UWCarouselViewDidSelectBlock)didSelectBlock {
+- (void)setDidSelectBlock:(ly_carouselViewDidSelectBlock)didSelectBlock {
     _didSelectBlock = didSelectBlock;
 }
 
-- (void)setDidChangeBlock:(UWCarouselViewDidChangeBlock)didChangeBlock {
+- (void)setDidChangeBlock:(ly_carouselViewDidChangeBlock)didChangeBlock {
     _didChangeBlock = didChangeBlock;
 }
 

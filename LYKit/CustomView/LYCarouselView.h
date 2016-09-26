@@ -1,5 +1,5 @@
 //
-//  UWCarouselView.h
+//  LYCarouselView.h
 //  uworks-library
 //
 //  Created by SheldonLee on 15/10/10.
@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UWCarouselItem : NSObject
+@interface LYCarouselItem : NSObject
 
 @property (nonatomic, strong) id userInfo;
 
@@ -19,7 +19,7 @@
 /**
  *  Online Image
  */
-@interface UWCarouselURLItem : UWCarouselItem
+@interface LYCarouselURLItem : LYCarouselItem
 
 @property (nonatomic, copy) NSString *imageUrl;
 
@@ -28,7 +28,7 @@
 /**
  *  Custom View
  */
-@interface UWCarouselViewItem : UWCarouselItem
+@interface LYCarouselViewItem : LYCarouselItem
 
 @property (nonatomic, strong) UIView *view;
 
@@ -39,10 +39,10 @@
 /**
  *  图片轮播器
  */
-@interface UWCarouselView : UIView
+@interface LYCarouselView : UIView
 
-typedef void (^UWCarouselViewDidSelectBlock)(UWCarouselItem *item, NSInteger index);
-typedef void (^UWCarouselViewDidChangeBlock)(UWCarouselView *view, NSInteger index);
+typedef void (^ly_carouselViewDidSelectBlock)(LYCarouselItem *item, NSInteger index);
+typedef void (^ly_carouselViewDidChangeBlock)(LYCarouselView *view, NSInteger index);
 
 /**
  *  默认placeholder图片
@@ -90,11 +90,11 @@ typedef void (^UWCarouselViewDidChangeBlock)(UWCarouselView *view, NSInteger ind
 /**
  *  点击事件的回调
  */
-- (void)setDidSelectBlock:(UWCarouselViewDidSelectBlock)didSelectBlock;
+- (void)setDidSelectBlock:(ly_carouselViewDidSelectBlock)didSelectBlock;
 
 /**
  *  轮播事件的回调
  */
-- (void)setDidChangeBlock:(UWCarouselViewDidChangeBlock)didChangeBlock;
+- (void)setDidChangeBlock:(ly_carouselViewDidChangeBlock)didChangeBlock;
 
 @end

@@ -1,14 +1,14 @@
 //
-//  UWRollingView.m
+//  LYRollingView.m
 //  uworks-library
 //
 //  Created by SheldonLee on 15/10/20.
 //  Copyright © 2015年 U-Works. All rights reserved.
 //
 
-#import "UWRollingView.h"
+#import "LYRollingView.h"
 
-@interface UWRollingView () {
+@interface LYRollingView () {
     UILabel *_label;
     UIButton *_button;
     NSTimer *_timer;
@@ -18,7 +18,7 @@
 }
 @end
 
-@implementation UWRollingView
+@implementation LYRollingView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -129,19 +129,19 @@
     animation.timingFunction = UIViewAnimationCurveEaseInOut;
     
     switch (self.RollAnimationType) {
-        case UWRollViewAnimationTypeCube:
+        case LYRollViewAnimationTypeCube:
             animation.type = @"cube";
             break;
-        case UWRollViewAnimationTypePush:
+        case LYRollViewAnimationTypePush:
             animation.type = kCATransitionPush;
             break;
-        case UWRollViewAnimationTypeReveal:
+        case LYRollViewAnimationTypeReveal:
             animation.type = kCATransitionReveal;
             break;
-        case UWRollViewAnimationTypeMoveIn:
+        case LYRollViewAnimationTypeMoveIn:
             animation.type = kCATransitionMoveIn;
             break;
-        case UWRollViewAnimationTypeFade:
+        case LYRollViewAnimationTypeFade:
             animation.type = kCATransitionFade;
             break;
             
@@ -151,16 +151,16 @@
     }
     
     switch (self.RollDirection) {
-        case UWRollViewDirectionFromUp:
+        case LYRollViewDirectionFromUp:
             animation.subtype = kCATransitionFromBottom;
             break;
-        case UWRollViewDirectionFromLeft:
+        case LYRollViewDirectionFromLeft:
             animation.subtype = kCATransitionFromLeft;
             break;
-        case UWRollViewDirectionFromDown:
+        case LYRollViewDirectionFromDown:
             animation.subtype = kCATransitionFromTop;
             break;
-        case UWRollViewDirectionFromRight:
+        case LYRollViewDirectionFromRight:
             animation.subtype = kCATransitionFromRight;
             break;
             

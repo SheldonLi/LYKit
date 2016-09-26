@@ -1,14 +1,14 @@
 //
-//  UWTextAnimationView.m
+//  LYTextAnimationView.m
 //  uworks-library
 //
 //  Created by SheldonLee on 12/12/15.
 //  Copyright © 2015 Sheldon. All rights reserved.
 //
 
-#import "UWTextAnimationView.h"
+#import "LYTextAnimationView.h"
 
-@interface UWTextAnimationView()
+@interface LYTextAnimationView()
 
 @property (nonatomic, assign) NSTimer *time;
 
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation UWTextAnimationView
+@implementation LYTextAnimationView
 
 - (instancetype)init {
     self = [super init];

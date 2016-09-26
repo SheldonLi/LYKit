@@ -1,5 +1,5 @@
 //
-//  UWTextAnimationView.h
+//  LYTextAnimationView.h
 //  uworks-library
 //
 //  Created by SheldonLee on 12/12/15.
@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UWTextAnimationView : UIView
+@interface LYTextAnimationView : UIView
 
 /**
  *  需要显示的文字
