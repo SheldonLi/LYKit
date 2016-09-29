@@ -14,25 +14,33 @@ CGRect  CGRectMoveToCenter(CGRect rect, CGPoint center);
 
 @interface UIView (FrameTool)
 
-@property (readonly) CGPoint bottomLeft;
-@property (readonly) CGPoint bottomRight;
-@property (readonly) CGPoint topRight;
+@property (readonly) CGPoint ly_bottomLeft;
+@property (readonly) CGPoint ly_bottomRight;
+@property (readonly) CGPoint ly_topRight;
 
 
-@property CGFloat top;
-@property CGFloat left;
+@property (nonatomic, assign) CGFloat ly_top;
+@property (nonatomic, assign) CGFloat ly_left;
 
-@property CGFloat bottom;
-@property CGFloat right;
+@property (nonatomic, assign) CGFloat ly_bottom;
+@property (nonatomic, assign) CGFloat ly_right;
 
-@property (nonatomic, assign) CGFloat x;
-@property (nonatomic, assign) CGFloat y;
-@property (nonatomic, assign) CGFloat width;
-@property (nonatomic, assign) CGFloat height;
-@property (nonatomic, assign) CGFloat centerX;
-@property (nonatomic, assign) CGFloat centerY;
-@property (nonatomic, assign) CGSize size;
-@property (nonatomic, assign) CGPoint orign;
+@property (nonatomic, assign) CGFloat ly_x;
+@property (nonatomic, assign) CGFloat ly_y;
+@property (nonatomic, assign) CGFloat ly_width;
+@property (nonatomic, assign) CGFloat ly_height;
+@property (nonatomic, assign) CGFloat ly_centerX;
+@property (nonatomic, assign) CGFloat ly_centerY;
+@property (nonatomic, assign) CGSize ly_size;
+@property (nonatomic, assign) CGPoint ly_origin;
+
+
+
++ (CGFloat)ly_screenWidth;
+
++ (CGFloat)ly_screenHeight;
+
++ (CGFloat)ly_scale;
 
 - (void)moveBy:(CGPoint)delta;
 - (void)scaleBy:(CGFloat)scaleFactor;

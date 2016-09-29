@@ -30,6 +30,6 @@
  *
  *  @return 圆形的头像
  */
-- (UWImageView *)initCircularImageViewFrame:(CGRect)frame Target:(id)target Action:(SEL)action;
+- (LYImageView *)initCircularImageViewFrame:(CGRect)frame Target:(id)target Action:(SEL)action;
 
 @end
