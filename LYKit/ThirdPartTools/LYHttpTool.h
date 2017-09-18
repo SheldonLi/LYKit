@@ -12,7 +12,10 @@
 
 typedef void (^ly_httpSuccessBlock)(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject);
 typedef void (^ly_httpFailureBlock)(NSURLSessionDataTask *_Nullable task, NSError *_Nonnull error);
-typedef void (^ly_httpProgressBlock)(NSProgress *_Nonnull uploadProgress);
+typedef void (^ly_httpProgressBlock)(NSProgress *_Nonnull progress);
+
+typedef void (^ly_downloadSuccessBlock)(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath);
+typedef void (^ly_downloadFailureBlock)(NSError *_Nonnull error);
 
 /**
  *  更新基础url
@@ -48,6 +51,13 @@ typedef void (^ly_httpProgressBlock)(NSProgress *_Nonnull uploadProgress);
  *  @return 超时时间
  */
 + (NSTimeInterval)requestTimeout;
+
+/**
+ *  仅在Wifi状态下传输
+ *
+ *  @return 是否仅wifi传输
+ */
++ (BOOL)onlyWifiTransfer;
 
 /**
  *  开启或关闭接口打印信息
@@ -111,5 +121,43 @@ typedef void (^ly_httpProgressBlock)(NSProgress *_Nonnull uploadProgress);
           progress:(ly_httpProgressBlock _Nullable)progress
            success:(ly_httpSuccessBlock _Nullable)success
            failure:(ly_httpFailureBlock _Nullable)failure;
+
+/**
+ *  下载请求(非background模式)
+ *
+ *  @param urlString    请求地址
+ *  @param params       请求参数
+ *  @param pathString   文件存储位置
+ *  @param progress     请求进度回调
+ *  @param success      请求成功回调
+ *  @param failure      请求失败回调
+ *
+ *  @return 下载任务
+ */
++ (NSURLSessionDownloadTask *_Nonnull)downloadWithURL:(NSString *_Nonnull)urlString
+                                               params:(NSDictionary *_Nullable)params
+                                      destinationpath:(NSString *_Nullable)pathString
+                                             progress:(ly_httpProgressBlock _Nullable)progress
+                                              success:(ly_downloadSuccessBlock _Nullable)success
+                                              failure:(ly_downloadFailureBlock _Nullable)failure;
+
+/**
+ *  下载请求(background模式)
+ *
+ *  @param urlString    请求地址
+ *  @param params       请求参数
+ *  @param pathString   文件存储位置
+ *  @param progress     请求进度回调
+ *  @param success      请求成功回调
+ *  @param failure      请求失败回调
+ *
+ *  @return 下载任务
+ */
++ (NSURLSessionDownloadTask *_Nonnull)downloadInBackgroundWithURL:(NSString *_Nonnull)urlString
+                                                           params:(NSDictionary *_Nullable)params
+                                                  destinationpath:(NSString *_Nullable)pathString
+                                                         progress:(ly_httpProgressBlock _Nullable)progress
+                                                          success:(ly_downloadSuccessBlock _Nullable)success
+                                                          failure:(ly_downloadFailureBlock _Nullable)failure;
 
 @end
