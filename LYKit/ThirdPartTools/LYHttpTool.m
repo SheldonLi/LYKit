@@ -30,6 +30,8 @@ static BOOL ly_isEnableInterfaceDebug = NO;
 //  请求头
 static NSDictionary *ly_httpHeaders = nil;
 
+static AFHTTPSessionManager *ly_sharedManager = nil;
+
 @implementation LYHttpTool
 
 + (void)updateRequestTimeout:(NSTimeInterval)timeout {
@@ -73,7 +75,15 @@ static NSDictionary *ly_httpHeaders = nil;
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     
     manager.responseSerializer.acceptableContentTypes = [NSSet
-                                                         setWithArray:@[ @"application/json", @"text/html", @"text/json", @"text/javascript" ]];
+                                                         setWithArray:@[ @"application/json",
+                                                                         @"text/html",
+                                                                         @"text/json",
+                                                                         @"text/javascript",
+                                                                         @"text/plain"]];
+    
+    //处理https加密问题
+    [manager setSecurityPolicy:[self customSecurityPolicy]];
+    
     //  请求头设置
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -87,31 +97,41 @@ static NSDictionary *ly_httpHeaders = nil;
 }
 
 + (AFHTTPSessionManager *)commonManager {
-    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
-    //  初始化BaseUrl
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:ly_baseURLString]];
-    [self commonManagerSetting:manager];
-    return manager;
+    
+    @synchronized (self) {
+        if (ly_sharedManager == nil) {
+            
+            [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+            //  初始化BaseUrl
+            ly_sharedManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:ly_baseURLString]];
+            [self commonManagerSetting:ly_sharedManager];
+        }
+    }
+    return ly_sharedManager;
 }
 
 + (AFHTTPSessionManager *)downloadManagerWithFileIdentifier:(NSString *)identifier; {
     
-    NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:identifier];
-    sessionConfiguration.sessionSendsLaunchEvents = YES;
-    sessionConfiguration.discretionary = YES;
-    sessionConfiguration.HTTPMaximumConnectionsPerHost = 1;
-    
-    if ([self onlyWifiTransfer]) {
-        sessionConfiguration.allowsCellularAccess = NO;
-    } else {
-        sessionConfiguration.allowsCellularAccess = YES;
+    @synchronized (self) {
+        if (ly_sharedManager == nil) {
+            
+            NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:identifier];
+            sessionConfiguration.sessionSendsLaunchEvents = YES;
+            sessionConfiguration.discretionary = YES;
+            sessionConfiguration.HTTPMaximumConnectionsPerHost = 1;
+            
+            if ([self onlyWifiTransfer]) {
+                sessionConfiguration.allowsCellularAccess = NO;
+            } else {
+                sessionConfiguration.allowsCellularAccess = YES;
+            }
+            
+            ly_sharedManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:ly_baseURLString] sessionConfiguration:sessionConfiguration];
+            
+            [self commonManagerSetting:ly_sharedManager];
+        }
     }
-    
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:ly_baseURLString] sessionConfiguration:sessionConfiguration];
-    
-    [self commonManagerSetting:manager];
-    
-    return manager;
+    return ly_sharedManager;
 }
 
 + (void)getWithURL:(NSString *)url
@@ -293,7 +313,28 @@ static NSDictionary *ly_httpHeaders = nil;
 }
     
     
++ (AFSecurityPolicy *)customSecurityPolicy {
     
+    NSString *cerPath = [[NSBundle mainBundle] pathForResource:[QYNetworkBaseConfig getSSLCertificationName] ofType:@"cer"];//证书的路径
+    NSData *certData = [NSData dataWithContentsOfFile:cerPath];
+    
+    AFSecurityPolicy *securityPolicy;
+    
+    if (certData.length > 0) {
+        securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+        securityPolicy.allowInvalidCertificates = YES;
+        securityPolicy.validatesDomainName = NO;
+        if (certData) {
+            securityPolicy.pinnedCertificates = [NSSet setWithObject:certData];
+        }
+    } else {
+        securityPolicy = [AFSecurityPolicy defaultPolicy];
+        securityPolicy.allowInvalidCertificates = YES;
+        securityPolicy.validatesDomainName = NO;
+    }
+    
+    return securityPolicy;
+}
 
 + (void)logWithSuccessResponse:(id)response url:(NSString *)url params:(NSDictionary *)params {
     LYHttpLog(@"\nabsoluteUrl: %@\n params:%@\n response:%@\n\n", url, params, response);
